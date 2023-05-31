@@ -1,0 +1,116 @@
+﻿@using TravelTripProject.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil & Seyahat BLoğum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                              
+                                
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restoranlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak Şeyler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var item in Model)
+                                {
+                                    <li><img src="~/Resimler/@item.BlogImage" style="width:637px;height:392px"></li>
+
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Projeme Hoşgeldiniz!</h3>
+                    <p>
+                        Tatil planlamak, hayatımızın en keyifli ve özel deneyimlerinden biridir.
+                        Yeni yerler keşfetmek, farklı kültürleri tanımak, lezzetli yemekler yemek ve güzel manzaraları seyretmek tatilde bize unutulmaz anılar yaşatır.
+
+                        Tatil seyahat projenizde nereyi ziyaret etmek istediğinize karar verirken, öncelikle ilgi alanlarınızı ve tatil tarzınızı belirleyebilirsiniz.
+                        Şehir tatili mi yoksa doğa tatili mi yapmak istersiniz?
+                        Tarihi yerleri mi keşfetmek istersiniz yoksa plajda güneşlenmek mi?
+                        Bu sorulara cevap vererek, tatil planınızı daha kolay bir şekilde oluşturabilirsiniz.
+
+                        Tatil seyahat projenizde size yardımcı olmak için buradayım. İhtiyacınız olan her konuda size destek olabilirim.
+                        Tatil planlarınızın gerçekleşmesi ve unutulmaz anılar biriktirmeniz dileğiyle!
+                    </p>
+                </div>
+                @Html.Action("Partial1","Default")
+
+                <div class="grids">
+                    <div class="box1">
+                      @Html.Action("Partial3","Default")
+                       @Html.Action("Partial4","Default") 
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@using TravelTripProject.Models.Sınıflar
+@model List<Blog>
+
+
+<div class="padding">
+    <h4>Popüler 10 Blog</h4>
+    <ul class="list list-pad">
+        @{ int a = 1;}
+        @foreach (var item in Model)
+        {
+            <li class="list-bg"><span>@a.</span><a href="/Blog/BlogDetay/@item.ID">@item.Baslik</a></li>
+            a= a + 1;
+
+            //if (a>10) 10 tane blog getirme
+            //{
+            //    break;
+            //}
+        }
+
+    </ul>
+    <a href="/Blog/Index" class="link1">Tüm BLogları Gör </a>
+</div>

@@ -1,0 +1,36 @@
+﻿@using TravelTripProject.Models.Sınıflar
+@model iletisim
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Scripts/iletisim.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <form id="contact" method="post">
+            <h2>İletişim Sayfası</h2>
+            <div class="form-control">
+                <input placeholder="Adınız Soyadınız" type="text" name="AdSoyad" required autofocus>
+            </div>
+            <div class="form-control">
+                <input placeholder="E-Posta Adresiniz" type="email" name="Mail" required>
+            </div>
+            <div class="form-control">
+                <input placeholder="Konu" type="text" name="Konu" required>
+            </div>
+            <div class="form-control">
+                <textarea placeholder="Lütfen Mesajınızı Buraya Yazın.." name="Mesaj" required></textarea>
+            </div>
+            <div class="form-control">
+                <button name="submit" type="submit" id="submit">GÖNDER</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@using TravelTripProject.Models.Sınıflar
+@model List<Blog>
+
+
+<div class="padding1">
+    <h4>En İyi Yerlerimiz</h4>
+
+    <div class="box-left">
+        @foreach (var item in Model)
+        {
+            <div class="bot-img">
+                <img src="~/Resimler/@item.BlogImage" alt="" style="width:120px;height:80px" />
+            </div>
+            <div class="bot-desc">
+                @if (item.Aciklama.Length > 10)
+                {
+                    <p>@item.Aciklama.Substring(0, 80)<span>...</span></p>
+                }
+                else
+                {
+                    <p>@item.Aciklama</p>
+
+                }
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+
+
+    <div class="box1-left">
+
+        @Html.Action("Partial5","Default")
+
+
+    </div>
+</div>
